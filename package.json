@@ -1,6 +1,6 @@
 {
   "name": "egg-json-db",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "简单的json数据库",
   "eggPlugin": {
     "name": "jsonDb"
@@ -38,6 +38,7 @@
   },
   "files": [
     "config",
+    "app",
     "app.js"
   ],
   "ci": {

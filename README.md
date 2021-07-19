@@ -42,14 +42,11 @@ exports.jsonDb = {
 
 ## Configuration
 
-
 ```js
 // {app_root}/config/config.default.js
 exports.jsonDb = {
-    // 存储路径  /test/
+  // 存储路径  /test/
   savePath: '',
-  // 默认文件名
-  defaultFileName: 'data',
   // 命名
   nameSpace: 'model',
   // 加载文件夹
@@ -64,43 +61,43 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
-> 插件基于node-json-db,具体配置可参考[node-json-db](https://github.com/Belphemur/node-json-db)
+> 插件基于 node-json-db,具体方法可参考[node-json-db](https://github.com/Belphemur/node-json-db)
+
 ```js
 // {app_root}/app/model/myDataBase.js
 'use strict';
 
-const { JsonDB } = require('node-json-db');
-const { Config } = require('node-json-db/dist/lib/JsonDBConfig');
-
 module.exports = app => {
-  const myDataBase = new JsonDB(new Config("myDataBase", true, false, '/'));
+  /**
+   * jsonDbSchema
+   * @param {*} obj | json 初始化数据，默认{}
+   * @param {*} model | 生成json文件名，默认data
+   * @return | JsonDB
+   */
+  const myDataBase = app.jsonDbSchema({ test1: 0 }, 'test1');
   return myDataBase;
 };
 
-
 // {app_root}/app/controller/home.js
-'use strict';
+('use strict');
 
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
     const { model } = this.app;
-    model.myDataBase.push('/test3', { test: 'test', json: { test: [ 'test' ] } });
+    model.myDataBase.push('/test3', { test: 'test', json: { test: ['test'] } });
     console.log('数据：', JSON.stringify(model.myDataBase.getData('/')));
     this.ctx.body = model.myDataBase.getData('/test3');
   }
 }
 
 module.exports = HomeController;
-
-
 ```
-
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+Please open an issue [here](https://github.com/packaaa/egg-json-db/issues).
 
 ## License
 

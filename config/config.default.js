@@ -8,8 +8,6 @@
 exports.jsonDb = {
   // 存储路径  /test/
   savePath: '',
-  // 默认文件名
-  defaultFileName: 'data',
   // 命名
   nameSpace: 'model',
   // 加载文件夹
