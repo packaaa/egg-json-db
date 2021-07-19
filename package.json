@@ -1,6 +1,6 @@
 {
   "name": "egg-json-db",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "简单的json数据库",
   "eggPlugin": {
     "name": "jsonDb"
@@ -46,12 +46,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-json-db.git"
+    "url": "https://github.com/packaaa/egg-json-db.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/packaaa/egg-json-db/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-json-db#readme",
+  "homepage": "https://github.com/packaaa/egg-json-db#readme",
   "author": "",
   "license": "MIT"
 }
