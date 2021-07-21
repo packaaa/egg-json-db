@@ -21,7 +21,7 @@ module.exports = {
         jsonDb.separator
       )
     );
-    !db.exists(jsonDb.separator) && db.push(jsonDb.separator, obj);
+    JSON.stringify(db.getData(jsonDb.separator)) === '{}' && db.push(jsonDb.separator, obj);
     return db;
   },
 };
